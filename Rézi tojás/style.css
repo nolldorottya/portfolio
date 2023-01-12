@@ -1,0 +1,478 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Arima", cursive;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+:root {
+  --grey-light: #dadada;
+  --grey-middle: #b0a8a7;
+  --grey-dark: #353333;
+
+  --primary-light: #ffa183;
+  --primary-middle: #ed553b;
+  --primary-dark: #c22626;
+
+  --secondary-light: #fffcae;
+  --secondary-middle: #ffdc4d;
+  --secondary-dark: #f6c000;
+}
+.fa-quote-right {
+  color: var(--primary-middle);
+  padding-right: 1rem;
+}
+
+.header {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0)
+    ),
+    url(DSC_5342.jpg);
+  background-size: cover;
+  background-position: right;
+  height: 740px;
+  width: 100%;
+
+  /* position: relative; */
+}
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navigation__logo {
+  width: 15rem;
+  padding: 2rem 3rem;
+}
+.header__navigation__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.header__navigation__list--style:link,
+.header__navigation__list--style:visited {
+  margin: 0 3rem;
+  text-decoration: none;
+  color: var(--grey-light);
+  font-size: 2rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem black;
+  position: relative;
+}
+.header__navigation__list--style:hover,
+.header__navigation__list--style:focus {
+  border-bottom: 2px solid var(--secondary-dark);
+}
+
+.header__text-on-image {
+  color: var(--grey-light);
+  font-size: 2.5rem;
+  width: 350px;
+  position: absolute;
+  left: 15rem;
+  top: 20rem;
+}
+
+@media (max-width: 1024px) {
+  .header__text-on-image {
+    position: absolute;
+    left: 10rem;
+    top: 20rem;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    background-image: none;
+    background-color: var(--grey-dark);
+  }
+}
+
+.header__text-on-image .header__text-on-image__title {
+  font-size: 7rem;
+  font-weight: 700;
+  color: var(--grey-light);
+}
+.header__text-on-image__btn {
+  margin-top: 4rem;
+  transition: all 0.2s;
+}
+
+.header__text-on-image__btn--style:link,
+.header__text-on-image__btn--style:visited {
+  background-color: var(--primary-middle);
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0.1rem 0.1rem 0.5rem black;
+  transition: all 0.3s;
+}
+.header__text-on-image__btn--style:hover {
+  transform: translateY(-0.5rem);
+  background-color: var(--primary-dark);
+}
+.header__text-on-image__btn:active {
+  transform: translateY(0.5rem);
+}
+
+.header__arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  font-size: 4rem;
+  transition: all 1s;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+}
+.header__arrow::after {
+  content: "";
+  transition: all 0.5s;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+}
+.header__arrow:hover {
+  font-size: 5rem;
+  background-color: var(--secondary-middle);
+  padding: 0 2rem;
+}
+.header__arrow:hover::after {
+  content: "Ez nem működik, görgess tovább...";
+}
+
+.header__arrow--style:link,
+.header__arrow--style:visited {
+  color: var(--grey-light);
+}
+.header__arrow--style:hover {
+  color: var(--primary-middle);
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 5rem auto;
+}
+.sticky-logo {
+  position: sticky;
+  top: 3rem;
+  width: 15rem;
+  padding: 2rem 3rem;
+}
+.first-section__col {
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+.first-section__col:nth-child(2n) {
+  border-left: 0.4rem solid var(--primary-middle);
+  border-right: 0.4rem solid var(--primary-middle);
+  padding: 5rem 6rem;
+}
+.first-section__col i {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+  transition: all 0.3s;
+}
+.first-section__col i:hover {
+  color: var(--secondary-middle);
+}
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  height: 750px;
+}
+
+/* @media (max-width: 800px) {
+  .about-section {
+    display: block;
+
+  }
+} */
+.about-section__image {
+  background-image: url(Martin_square.jpg);
+  background-size: cover;
+  border-radius: 0.5rem;
+  width: 60rem;
+  height: 60rem;
+  transition: all 1s ease-out;
+}
+.about-section__image:hover {
+  background-image: url(Martin_square2.jpg);
+}
+.about-section__text {
+  color: var(--grey-dark);
+  padding-left: 5rem;
+  width: 40%;
+  font-size: 2rem;
+  text-align: justify;
+}
+.about-section__text__title {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3;
+}
+.about-section__text--after {
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-dark);
+}
+.about-section__text--arrow {
+  font-size: 3rem;
+  padding: 5rem 1.5rem 5rem 0;
+  color: var(--primary-middle);
+}
+.about-section__text--after:hover::after {
+  content: "Vissza az elejére";
+}
+
+.third-section {
+  width: 80%;
+  margin: 0 auto;
+  height: 90vh;
+}
+
+.third-section__title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding-bottom: 3rem;
+}
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  height: 48rem;
+  font-size: 1.6rem;
+  position: relative;
+}
+.reviews__col {
+  width: 23%;
+  border: 1px solid var(--grey-light);
+  border-radius: 10px;
+}
+.reviews__col img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.reviews__col__text {
+  padding: 2rem;
+}
+.reviews__col__name {
+  font-weight: 600;
+  padding: 0 2rem;
+  position: absolute;
+  bottom: 1rem;
+}
+.footer {
+  background-color: var(--primary-middle);
+}
+.footer__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__logo {
+  filter: brightness(0) invert(1);
+  width: 15rem;
+  padding: 2rem 3rem;
+}
+.footer__link__text {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+/* PRODUCTS.html ******************************************************************************************************************************************************* */
+
+.header--products {
+  background-image: none;
+  height: 8rem;
+}
+.header__navigation__list .header__navigation__list--style--products {
+  color: var(--grey-dark);
+  text-shadow: none;
+}
+.header__navigation__list .products,
+.header__navigation__list .contact {
+  border-bottom: 2px solid var(--secondary-dark);
+}
+.products__first-section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 80%;
+  height: 100vh;
+}
+.products__first-section__text,
+.contact__text__info {
+  color: var(--grey-dark);
+  padding-top: 5rem;
+  width: 40%;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+.products__first-section__text--title,
+.contact__text__title {
+  color: var(--primary-middle);
+  font-size: 7rem;
+  font-weight: 700;
+}
+
+.products__first-section__image,
+.contact__image {
+  background-image: url(Rudi_Balboa_square_right.png);
+  background-size: cover;
+  width: 55rem;
+  height: 55rem;
+}
+.products__live {
+  background-image: url(farm_stallone.jpg);
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+.products__live__text {
+  padding: 1rem;
+  font-size: 2rem;
+}
+.products__live__text .fa-circle {
+  color: red;
+  font-size: 1.8rem;
+}
+.products__egg {
+  color: var(--primary-middle);
+  text-shadow: 0 0 2rem var(--secondary-light);
+  font-size: 6rem;
+  position: absolute;
+  top: 38%;
+  right: 19%;
+  animation: eggMove 1.5s ease-out;
+  animation-iteration-count: infinite;
+}
+.products__egg2 {
+  color: var(--primary-middle);
+  text-shadow: 0 0 2rem var(--secondary-light);
+  font-size: 6rem;
+  position: absolute;
+  top: 38%;
+  right: 19%;
+  animation: eggMove 1.5s ease-out 0.5s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+.products__egg3 {
+  text-shadow: 0 0 2rem var(--secondary-light);
+  color: var(--primary-middle);
+  font-size: 6rem;
+  position: absolute;
+  top: 38%;
+  right: 19%;
+  animation: eggMove 1.5s ease-out 1s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+.products__egg4 {
+  text-shadow: 0 0 2rem var(--secondary-light);
+  color: var(--primary-middle);
+  font-size: 6rem;
+  position: absolute;
+  top: 38%;
+  left: 23%;
+  animation: eggMove 1.5s ease-out;
+  animation-iteration-count: infinite;
+}
+.products__egg5 {
+  text-shadow: 0 0 2rem var(--secondary-light);
+  color: var(--primary-middle);
+  font-size: 6rem;
+  position: absolute;
+  top: 38%;
+  left: 23%;
+  animation: eggMove 1.5s ease-out 0.5s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+.products__egg6 {
+  text-shadow: 0 0 2rem var(--secondary-light);
+  color: var(--primary-middle);
+  font-size: 6rem;
+  position: absolute;
+  top: 38%;
+  left: 23%;
+  animation: eggMove 1.5s ease-out 1s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes eggMove {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
+}
+
+/* CONTACT *************************************************************************************************************************************************************** */
+
+.contact__main .contact__image {
+  background-image: url(cute_square.jpg);
+  border-radius: 1rem;
+}
+.contact__main .contact__image:hover {
+  background-image: url(kaki_square.jpg);
+}
+.contact__main .contact__text {
+  padding: 10rem 3rem;
+  /* border: 1px solid red; */
+  width: 50%;
+}
+.contact__main .contact__text .contact__text__title {
+  font-size: 5rem;
+}
+.contact__text__subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  /* border: 1px solid red; */
+}
+.contact__main .contact__text__info {
+  width: 60%;
+  padding-top: 1rem;
+  font-size: 1.6rem;
+}
+.contact__main {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+  width: 80%;
+}
+.header__text-on-image__btn__contact--style {
+  font-size: 2rem;
+}
+
+/* MOBILE ****************************************************************************************************************************************************** */
+
+@media only screen and (max-width: 600px) {
+}
