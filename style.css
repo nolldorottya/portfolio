@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: rgb(131, 45, 212);
+}
+header {
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+  color: rgb(131, 45, 212);
+}
+
+main {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+main div {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.2s;
+  filter: grayscale();
+}
+main div:hover {
+  filter: none;
+}
+
+main div p {
+  padding-top: 8px;
+  width: 100%;
+  text-align: center;
+
+  animation: text 1s ease-in-out;
+}
+
+.rock_paper_scissors {
+  background-image: url(rock.png);
+}
+.guess {
+  background-image: url(guess.jpg);
+}
+.bankist {
+  background-image: url(bank.jpg);
+}
+.modal {
+  background-image: url(modal.jpg);
+}
+.frontendmentor1 {
+  background-image: url(fe1.jpg);
+}
+.frontendmentor2 {
+  background-image: url(fe2.jpg);
+}
+.frontendmentor3 {
+  background-image: url(fe3.jpg);
+}
+.frontendmentor4 {
+  background-image: url(fe4.jpg);
+}
+.pig {
+  background-image: url(pig.jpg);
+}
+.rezi {
+  background-image: url(rezi.jpg);
+}
