@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/e448a6df22.js" crossorigin="anonymous"></script>
+  <title>Rock, Paper, Scissors</title>
+
+</head>
+
+<body>
+  <main>
+
+    <section class="mainPage">
+      <section class="top">
+
+        <section class="scoreHeartYou scoreCounter">Your lives
+
+          <section class="startHeartsYou scoreCounterHeartsYou flex_spacebetween">
+            <div class="award"><i class="fa-solid fa-heart"></i></div>
+            <div class="award"><i class="fa-solid fa-heart"></i></div>
+            <div class="award"><i class="fa-solid fa-heart"></i></div>
+          </section>
+
+        </section>
+
+
+        <section class="first flex_spacebetween">
+          <div class=" score flex_spacebetween">
+            <h2 class="score__text">Your score</h2>
+            <h2 class="score1">0</h2>
+          </div>
+          <div class="title">
+            <h2>rock</h2>
+            <h2>paper</h2>
+            <h2>scissors</h2>
+          </div>
+          <div class=" score flex_spacebetween">
+            <h2 class="score__text">Computer's score</h2>
+            <h2 class="score2">0</h2>
+          </div>
+        </section>
+        <section class="scoreHeartComp  scoreCounter">Computer's lives
+
+          <section class="scoreCounterHeartsComp flex_spacebetween startHeartsComp">
+            <div class="award"><i class="fa-solid fa-heart"></i></div>
+            <div class="award"><i class="fa-solid fa-heart"></i></div>
+            <div class="award"><i class="fa-solid fa-heart"></i></div>
+          </section>
+        </section>
+      </section>
+
+
+
+      <section class="battleField">
+        <div class="flex_column_mobile_your">
+          <div class="scoreHeartYou scoreCounter ">Your lives
+
+            <section class="startHeartsYouMobile scoreCounterHeartsYou scoreCounterHeartsYouMobile flex_spacebetween">
+              <div class="award"><i class="fa-solid fa-heart"></i></div>
+              <div class="award"><i class="fa-solid fa-heart"></i></div>
+              <div class="award"><i class="fa-solid fa-heart"></i></div>
+            </section>
+
+          </div>
+          <div class="scoreMobile flex_spacebetween">
+            <h2 class="score__text">Your score</h2>
+            <h2 class="score1Mobile">0</h2>
+          </div>
+        </div>
+
+
+        <section class="second flex_spacebetween">
+          <img class="triangle" src="images/bg-triangle.svg" alt="bg-triangle">
+          <div class="rock"><img src="images/icon-rock.svg" alt="rock"></div>
+
+          <div class="paper"> <img src="images/icon-paper.svg" alt="paper"></div>
+
+          <div class="scissors"><img src="images/icon-scissors.svg" alt="scirrors"></div>
+
+
+        </section>
+
+        <div class="flex_column_mobile_comp">
+          <div class="scoreHeartComp scoreCounter ">Computer's lives
+
+            <section
+              class="startHeartsCompMobile scoreCounterHeartsComp scoreCounterHeartsCompMobile flex_spacebetween">
+              <div class="award"><i class="fa-solid fa-heart"></i></div>
+              <div class="award"><i class="fa-solid fa-heart"></i></div>
+              <div class="award"><i class="fa-solid fa-heart"></i></div>
+            </section>
+
+          </div>
+          <div class="scoreMobile flex_spacebetween">
+            <h2 class="score__text">Computer's score</h2>
+            <h2 class="score2Mobile">0</h2>
+          </div>
+      </section>
+
+
+    </section>
+
+
+    <section class="result">
+      <section class="battle_result hidden">
+
+        <div class="battle_result_text  hidden">
+        </div>
+        <div class="retry hidden">Next round
+
+        </div>
+      </section>
+      <section class="battle flex_spacebetween  hidden">
+        <div class="flex_battle">
+          <div class="yourChoice">
+            <img class="picture" src="images/icon-rock.svg" alt="your choice">
+          </div>
+          <div class="picked">You picked</div>
+        </div>
+
+        <div class="flex_battle">
+          <div class="compChoice"><img class="picture2" src="images/Question_mark.svg" alt="computer choice">
+
+          </div>
+          <div class="picked">The computer picked</div>
+        </div>
+
+      </section>
+    </section>
+    <div class="overlay hidden"></div>
+
+    <section class="finalResult hidden">
+      <img class="firework hidden" src="images/CLIPLY_372109170_FREE_FIREWORKS_400.gif" alt="">
+      <div class="finalText">
+        <div class="finalResultText">Game over
+        </div>
+
+        <div class="playAgain">Play again!</div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
